@@ -26,5 +26,23 @@ export const deleteMedico = async (req, res) => {
   }
 };
 
+export const createMedico = async (req, res) => {
+  try {
+    const data = {
+      nombreMedico: req.body.nombreMedico,
+      especialidadMedico: req.body.especialidadMedico,
+      celularMedico: req.body.celularMedico,
+    };
 
+    const result = await medicoModel.create(data);
 
+    res.json({
+      mensaje: "Medico creado correctamente",
+      result,
+    });
+  } catch (error) {
+    res.status(500).json({
+      error: error.message,
+    });
+  }
+};
