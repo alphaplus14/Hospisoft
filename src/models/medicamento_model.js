@@ -11,14 +11,14 @@ const db = cnx.promise();
 
 export const medicamentoModel = {
   //TODO: listar todos: aplicacion de funciones async para aprovechar las promesas (hilos de ejecucion)
-  findALL: async () => {
-    const sql = "SELECCT * FROM tblmedicamento ORDER BY nombreMedicamento DESC";
+  findall: async () => {
+    const sql = "SELECT * FROM tblmedicamento ORDER BY nombreMedicamento DESC";
     //* Ejecutamos la consulta y obtenemos los resultados almacenados en un arreglo de objetos, cada objeto representa un medicamento
     const [rows] = await db.query(sql);
     return rows;
   },
   //TODO: Buscar por id recibe el id como parametro
-  findALLById: async (id) => {
+  findById: async (id) => {
     const sql = "SELECT * FROM tblmedicamento WHERE idMedicamentos = ?";
     const [rows] = await db.query(sql, [id]);
     return rows;
@@ -35,7 +35,7 @@ export const medicamentoModel = {
     return rows;
   },
   //TODO: Actualizar un medicamento recibe un objeto con los datos del medicamento a actualizar y el id del medicamento a actualizar
-  update: async (data, id) => {
+  update: async (id,data) => {
     const sql = "UPDATE tblmedicamento SET ? WHERE idMedicamentos =?";
     const [rows] = await db.query(sql, [data, id]);
     return rows;
