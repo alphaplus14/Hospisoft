@@ -12,4 +12,6 @@ import * as medicoCtr from "../controllers/medico.controller.js";
 
 const router = Router();
 
+router.get("/medico/listarmedicos",medicoCtr.getMedicos);
+
 export default router;

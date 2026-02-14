@@ -1,4 +1,4 @@
-import cnx from "./bdatos.js";
+import { cnx } from "./bdatos.js";
 
 const db = cnx.promise();
 
