@@ -8,4 +8,10 @@ export const medicoModel = {
     const [rows] = await db.query(sql);
     return rows;
   },
+
+  delete: async (id) => {
+    const sql = "delete from tblmedico where idMedico=?";
+    const [rows] = await db.query(sql, [id]);
+    return rows;
+  },
 };

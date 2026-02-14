@@ -12,6 +12,7 @@ import * as medicoCtr from "../controllers/medico.controller.js";
 
 const router = Router();
 
-router.get("/medico/listarmedicos",medicoCtr.getMedicos);
+router.get("/medico/listarmedicos", medicoCtr.getMedicos);
+router.delete("/medico/eliminarmedico/:id", medicoCtr.deleteMedico);
 
 export default router;
