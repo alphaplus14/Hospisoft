@@ -1,4 +1,4 @@
-import {usuariosModel} from "../models/usuariosModel.js";
+import {UsuariosModel as usuariosModel} from "../models/usuariosModel.js";
 
 export const getUsuarios = async (req, res) => {
   try {
@@ -63,6 +63,17 @@ export const updateUsuario = async (request, response) => {
   } catch (error) {
     response.status(500).json({ 
       mensaje: `Error al actualizar el usuario: ${error.message}` 
+    });
+  }
+};
+
+  export const deleteUsuario = async (request, response) => {
+  try {
+    const resultado = await usuariosModel.deleteByIdUsuario(request.params.id);
+    response.json(resultado);
+  } catch (error) {
+    response.status(500).json({ 
+      mensaje: `Error al eliminar el usuario: ${error.message}` 
     });
   }
 };

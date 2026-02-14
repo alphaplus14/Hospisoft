@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import medicoRutas from "./src/routes/medico.routes.js";
+import medicoRutas from "./src/routes/usuarios.routes.js";
 
 //instanciamos la libreria en un objeto - app
 const app = express();
