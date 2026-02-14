@@ -1,4 +1,4 @@
-// las rutas del modulo ciudadano
+// las rutas del modulo mmedico
 
 import { Router } from "express";
 
