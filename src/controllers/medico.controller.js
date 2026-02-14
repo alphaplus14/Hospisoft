@@ -46,3 +46,24 @@ export const createMedico = async (req, res) => {
     });
   }
 };
+
+export const updateMedico = async (req, res) => {
+  try {
+    const data = {
+      nombreMedico: req.body.nombreMedico,
+      especialidadMedico: req.body.especialidadMedico,
+      celularMedico: req.body.celularMedico,
+    };
+
+    const result = await medicoModel.update(req.params.id, data);
+
+    res.json({
+      mensaje: "Medico actualizado correctamente",
+      result,
+    });
+  } catch (error) {
+    res.status(500).json({
+      error: error.message,
+    });
+  }
+};

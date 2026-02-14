@@ -20,4 +20,10 @@ export const medicoModel = {
     const rows = await db.query(sql, [data]);
     return rows;
   },
+
+  update: async (data, id) => {
+    const sql = "update tblmedico set ? where idMedico=?";
+    const rows = await db.query(sql, [id, data]);
+    return rows;
+  },
 };
