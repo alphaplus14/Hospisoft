@@ -14,4 +14,8 @@ export const medicoModel = {
     const [rows] = await db.query(sql, [id]);
     return rows;
   },
+
+  create:async()=>{
+    const sql="insert into tblmedico"
+  }
 };

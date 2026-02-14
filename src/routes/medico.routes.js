@@ -1,4 +1,4 @@
-// las rutas del modulo ciudadano
+// las rutas del modulo 
 
 import { Router } from "express";
 
