@@ -8,3 +8,13 @@ export const getMedicos = async (req, res) => {
     res.status(500).json({ error: "Error al listar los medicos" });
   }
 };
+export const deleteMedico = async (req, res) => {
+  try {
+    const results = await medicoModel.Eliminar();
+    res.json({ results });
+  } catch (error) {
+    res.status(500).json({ error: "Error al eliminar medico" });
+  }
+};
+
+
