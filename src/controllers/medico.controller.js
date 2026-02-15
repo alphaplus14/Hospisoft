@@ -49,13 +49,14 @@ export const createMedico = async (req, res) => {
 
 export const updateMedico = async (req, res) => {
   try {
+    const { id } = req.params;
     const data = {
       nombreMedico: req.body.nombreMedico,
       especialidadMedico: req.body.especialidadMedico,
       celularMedico: req.body.celularMedico,
     };
 
-    const result = await medicoModel.update(req.params.id, data);
+    const result = await medicoModel.update(id, data);
 
     res.json({
       mensaje: "Medico actualizado correctamente",
