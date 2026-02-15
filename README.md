@@ -45,3 +45,50 @@ Router: se encarga de construir los endpoints o rutas de la API,En ella podemos 
 Models: Se encarga de la interaccion (Consultas) con el sistema gestor de base de datos SGBD, implementa la logica dele negocio
 Middleware: Es una capa intermedia entre el cliente y la API(ejemplo validar token,validar IP mediante cors)
 Helpers:ayudas, ayudante, clases o funciones reusables del sistema. Por ejemplo, un sistema de errores.
+
+## Módulos Implementados
+
+### Pacientes
+CRUD completo para la gestión de pacientes
+- Crear paciente
+- Listar todos los pacientes
+- Actualizar información del paciente
+- Eliminar paciente
+
+### Médicos
+CRUD completo para la gestión de médicos
+- Registrar médico
+- Listar todos los médicos
+- Actualizar información del médico
+- Eliminar médico
+
+###  Medicamentos
+CRUD completo para la gestión de medicamentos
+- Registrar medicamento
+- Listar todos los medicamentos
+- Actualizar información del medicamento
+- Eliminar medicamento
+
+### Usuarios
+CRUD completo para la gestión de usuarios del sistema
+- Crear usuario
+- Listar todos los usuarios
+- Actualizar información del usuario
+- Eliminar usuario
+
+## Endpoints de la API
+
+### Pacientes
+```
+GET    /api/pacientes/listarpacientes          # Listar todos los pacientes
+POST   /api/pacientes/crearpaciente         # Crear nuevo paciente
+PUT    /api/pacientes/actualizarpaciente/:id      # Actualizar paciente
+DELETE /api/pacientes/eliminarpaciente/:id      # Eliminar paciente
+```
+
+### Médicos
+```
+GET    /api/medicos/listarmedicos            # Listar todos los médicos
+POST   /api/medicos/crearmedico            # Crear nuevo médico
+PUT    /api/medicos/actualizarmedico/:id        # Actualizar médico
+DELETE /api/medicos/eliminarmedico/:id        # Eliminar médico
