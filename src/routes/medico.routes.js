@@ -1,4 +1,4 @@
-// las rutas del modulo
+// las rutas del modulo mmedico
 
 import { Router } from "express";
 
