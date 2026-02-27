@@ -13,7 +13,7 @@ import * as medicoCtr from "../controllers/medico.controller.js";
 const router = Router();
 
 router.get("/medico/listarmedicos", medicoCtr.getMedicos);
-router.get("medico/obtenermedico/:id", medicoCtr.getMedicoById);
+router.get("/medico/obtenermedico/:id", medicoCtr.getMedicoById);
 router.delete("/medico/eliminarmedico/:id", medicoCtr.deleteMedico);
 router.post("/medico/crearmedico", medicoCtr.createMedico);
 router.put("/medico/actualizarmedico/:id", medicoCtr.updateMedico);
