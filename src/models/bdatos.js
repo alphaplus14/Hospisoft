@@ -7,7 +7,7 @@ try {
     host: "localhost",
     user: "root",
     password: "", // Agregar tu contraseña real
-    database: "hospisoft_db",
+    database: "hospisoft",
     port: "3306",
     waitForConnections: true,
     connectionLimit: 10,
