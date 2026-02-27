@@ -11,31 +11,31 @@ import { db } from "./bdatos.js";
 export const medicamentoModel = {
   //TODO: listar todos: aplicacion de funciones async para aprovechar las promesas (hilos de ejecucion)
   findall: async () => {
-    const sql = "SELECT * FROM tblmedicamento ORDER BY nombreMedicamento DESC";
+    const sql = "SELECT * FROM medicamento ORDER BY nombreMedicamento DESC";
     //* Ejecutamos la consulta y obtenemos los resultados almacenados en un arreglo de objetos, cada objeto representa un medicamento
     const [rows] = await db.query(sql);
     return rows;
   },
   //TODO: Buscar por id recibe el id como parametro
   findById: async (id) => {
-    const sql = "SELECT * FROM tblmedicamento WHERE idMedicamento = ?";
+    const sql = "SELECT * FROM medicamento WHERE idMedicamento = ?";
     const [rows] = await db.query(sql, [id]);
     return rows;
   },
   //TODO: Crear un nuevo medicamento recibe un objeto con los datos del medicamento a crear
   create: async (data) => {
-    const sql = "INSERT INTO tblmedicamento SET ?";
+    const sql = "INSERT INTO medicamento SET ?";
     const [rows] = await db.query(sql, [data]);
     return rows;
   },
   delete: async (id) => {
-    const sql = "DELETE FROM tblmedicamento WHERE idMedicamento = ?";
+    const sql = "DELETE FROM medicamento WHERE idMedicamento = ?";
     const [rows] = await db.query(sql, [id]);
     return rows;
   },
   //TODO: Actualizar un medicamento recibe un objeto con los datos del medicamento a actualizar y el id del medicamento a actualizar
   update: async (id,data) => {
-    const sql = "UPDATE tblmedicamento SET ? WHERE idMedicamento =?";
+    const sql = "UPDATE medicamento SET ? WHERE idMedicamento =?";
     const [rows] = await db.query(sql, [data, id]);
     return rows;
   },
