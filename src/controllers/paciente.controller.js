@@ -9,6 +9,16 @@ export const getPacientes = async (req, res) => {
   }
 };
 
+export const getPacienteById = async (req, res) => {
+  try {
+    const result = await pacienteModel.findById(req.params.id);
+    res.json({ result });
+  } catch (error) {
+    res.status(500).json({
+      error: "Error al buscar paciente",
+    });
+  }
+};
 export const deletePaciente = async (req, res) => {
   try {
     const { id } = req.params;

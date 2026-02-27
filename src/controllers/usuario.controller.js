@@ -9,6 +9,15 @@ export const getUsuarios = async (req, res) => {
   }
 };
 
+export const getUsuarioById = async (req, res) => {
+  try {
+    const results = await usuarioModel.findbyid();
+    res.json({ results });
+  } catch (error) {
+    res.status(500).json({ error: "Error al obtener el usuario" });
+  }
+};
+
 export const deleteUsuario = async (req, res) => {
   try {
     const { id } = req.params;

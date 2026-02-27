@@ -10,6 +10,12 @@ export const pacienteModel = {
     return rows;
   },
 
+  findById: async (id) => {
+    const sql = "SELECT * FROM paciente WHERE idPaciente = ?";
+    const [rows] = await db.query(sql, [id]);
+    return rows;
+  },
+
   delete: async (id) => {
     const sql = "delete from paciente where idPaciente=?";
     const [rows] = await db.query(sql, [id]);

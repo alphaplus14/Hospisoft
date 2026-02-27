@@ -9,6 +9,18 @@ export const getMedicos = async (req, res) => {
   }
 };
 
+
+export const getMedicoById = async (req, res) => {
+  try {
+    const result = await medicoModel.findById(req.params.id);
+    res.json({ result });
+  } catch (error) {
+    res.status(500).json({
+      error: "Error al buscar medico",
+    });
+  }
+};
+
 export const deleteMedico = async (req, res) => {
   try {
     const { id } = req.params;
