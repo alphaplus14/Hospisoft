@@ -34,7 +34,7 @@ export const createMedicamento = async (req, res) => {
     nombreMedicamento: req.body.nombreMedicamento,
     cantidadMedicamento: req.body.cantidadMedicamento,
     precioMedicamento: req.body.precioMedicamento,
-    entrada_idmovimientoMedicamentos: req.bodyentrada_idmovimientoMedicamentos,
+    entrada_idmovimientoMedicamentos: req.body.entrada_idmovimientoMedicamentos,
   };
 
   try {
