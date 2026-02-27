@@ -32,8 +32,8 @@ export const deletePaciente = async (req, res) => {
 export const createPaciente = async (req, res) => {
   try {
     const data = {
+      idPaciente: req.body.idPaciente,
       nombrePaciente: req.body.nombrePaciente,
-      documentoPaciente: req.body.documentoPaciente,
       celularPaciente: req.body.celularPaciente,
       emailPaciente: req.body.emailPaciente,
       fechaNacimientoPaciente: req.body.fechaNacimientoPaciente,
@@ -53,8 +53,8 @@ export const updatePaciente = async (req, res) => {
   try {
     const { id } = req.params;
     const data = {
+      idPaciente: req.body.idPaciente,
       nombrePaciente: req.body.nombrePaciente,
-      documentoPaciente: req.body.documentoPaciente,
       celularPaciente: req.body.celularPaciente,
       emailPaciente: req.body.emailPaciente,
       fechaNacimientoPaciente: req.body.fechaNacimientoPaciente,
