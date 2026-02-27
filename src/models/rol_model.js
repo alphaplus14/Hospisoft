@@ -1,34 +1,34 @@
-import { cnx } from "./bdatos.js";
+import { cnx } from "bdatos.js";
 
 const db = cnx.promise();
 
-export const usuarioModel = {
+export const rolModel = {
   findall: async () => {
-    const sql = "select * from usuario";
+    const sql = "select * from rol";
     const [rows] = await db.query(sql);
 
     return rows;
   },
   findbyid: async () => {
-    const sql = "select * from usuario where idUsuario=?";
+    const sql = "select * from rol where idRol=?";
     const [rows] = await db.query(sql);
     return rows;
   },
 
   delete: async (id) => {
-    const sql = "delete from usuario where idUsuario=?";
+    const sql = "delete from rol where idRol=?";
     const [rows] = await db.query(sql, [id]);
     return rows;
   },
 
   create: async (data) => {
-    const sql = "insert into usuario set ?";
+    const sql = "insert into rol set ?";
     const [rows] = await db.query(sql, [data]);
     return rows;
   },
 
   update: async (data, id) => {
-    const sql = "update usuario set ? where idUsuario=?";
+    const sql = "update rol set ? where idRol=?";
     const [rows] = await db.query(sql, [id, data]);
     return rows;
   },
