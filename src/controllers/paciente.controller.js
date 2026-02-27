@@ -27,6 +27,7 @@ export const createPaciente = async (req, res) => {
       celularPaciente: req.body.celularPaciente,
       emailPaciente: req.body.emailPaciente,
       fechaNacimientoPaciente: req.body.fechaNacimientoPaciente,
+      eps: req.body.eps,
     };
     const results = await pacienteModel.create(data);
     res.json({
@@ -47,6 +48,7 @@ export const updatePaciente = async (req, res) => {
       celularPaciente: req.body.celularPaciente,
       emailPaciente: req.body.emailPaciente,
       fechaNacimientoPaciente: req.body.fechaNacimientoPaciente,
+      eps: req.body.eps,
     };
     const results = await pacienteModel.update(id, data);
     res.json({
