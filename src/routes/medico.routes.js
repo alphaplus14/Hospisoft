@@ -1,4 +1,4 @@
-// las rutas del modulo mmedico
+// las rutas del modulo
 
 import { Router } from "express";
 
@@ -12,6 +12,9 @@ import * as medicoCtr from "../controllers/medico.controller.js";
 
 const router = Router();
 
-router.get("/medico/listarmedicos",medicoCtr.getMedicos);
+router.get("/medico/listarmedicos", medicoCtr.getMedicos);
+router.delete("/medico/eliminarmedico/:id", medicoCtr.deleteMedico);
+router.post("/medico/crearmedico", medicoCtr.createMedico);
+router.put("/medico/actualizarmedico/:id", medicoCtr.updateMedico);
 
 export default router;

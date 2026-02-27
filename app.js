@@ -1,6 +1,9 @@
 import express from "express";
 import cors from "cors";
-import medicoRutas from "./src/routes/usuarios.routes.js";
+import medicoRutas from "./src/routes/medico.routes.js";
+import pacienteRutas from "./src/routes/paciente.routes.js";
+import medicamentoRutas from "./src/routes/medicamento.routes.js";
+import usuarioRutas from "./src/routes/usuario.routes.js";
 
 //instanciamos la libreria en un objeto - app
 const app = express();
@@ -9,5 +12,7 @@ app.use(cors());
 
 //rutas
 app.use("/api", medicoRutas);
-
+app.use("/api", medicamentoRutas);
+app.use("/api", pacienteRutas);
+app.use("/api", usuarioRutas);
 export default app;
