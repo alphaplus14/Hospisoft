@@ -11,7 +11,7 @@ export const getRoles = async (req, res) => {
 
 export const getRolById = async (req, res) => {
   try {
-    const results = await rolModel.findbyid();
+    const results = await rolModel.findbyid(req.params.id);
     res.json({ results });
   } catch (error) {
     res.status(500).json({ error: "Error al obtener el rol" });
