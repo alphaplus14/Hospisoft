@@ -29,6 +29,7 @@ export const deleteMedico = async (req, res) => {
 export const createMedico = async (req, res) => {
   try {
     const data = {
+      idMedico: req.body.idMedico,
       nombreMedico: req.body.nombreMedico,
       especialidadMedico: req.body.especialidadMedico,
       celularMedico: req.body.celularMedico,
