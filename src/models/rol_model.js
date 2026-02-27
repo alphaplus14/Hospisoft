@@ -1,6 +1,4 @@
-import { cnx } from "./bdatos.js";
-
-const db = cnx.promise();
+import { db } from "./bdatos.js";
 
 export const rolModel = {
   findall: async () => {

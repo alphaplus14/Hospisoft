@@ -1,10 +1,9 @@
 //? Capa modelo para el modulo de medicamentos
 
 //! Importamos la conexion a la base de datos
-import { cnx } from "./bdatos.js";
-
+import { db } from "./bdatos.js";
 //! Activar el manejo de promesas en la conexion
-const db = cnx.promise();
+// const db = cnx();
 
 //* Creamos el modulo: usando el concepto de la orientacion a objetos, creamos una clase que se encargara de manejar todo lo relacionado con los medicamentos
 //* Esta clase se encargara de manejar todo lo relacionado con los medicamentos, como por ejemplo: crear, leer, actualizar y eliminar medicamentos
