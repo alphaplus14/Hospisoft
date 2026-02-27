@@ -10,7 +10,7 @@ export const medicoModel = {
   },
 
   findById: async (id) => {
-    const sql = "SELECT * FROM medico WHERE idMedicamento = ?";
+    const sql = "SELECT * FROM medico WHERE idMedico = ?";
     const [rows] = await db.query(sql, [id]);
     return rows;
   },
