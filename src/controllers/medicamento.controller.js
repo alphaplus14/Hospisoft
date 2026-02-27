@@ -31,20 +31,20 @@ export const getMedicamentoById = async (req, res) => {
 //* Insertar un registro de medicamentos a la base de datos
 export const createMedicamento = async (req, res) => {
   const data = {
+    idMedicamento: req.body.idMedicamento,
     nombreMedicamento: req.body.nombreMedicamento,
     cantidadMedicamento: req.body.cantidadMedicamento,
     precioMedicamento: req.body.precioMedicamento,
-    entrada_idmovimientoMedicamentos: req.bodyentrada_idmovimientoMedicamentos,
+    Entrada_idmovimientosMedicamentos:
+      req.body.Entrada_idmovimientosMedicamentos,
   };
 
   try {
     const results = await medicamentoModel.create(data);
     res.json({ results });
   } catch (error) {
-    res.status(500).json({
-      error: "Error al crear el medicamento",
-    });
     console.log(error);
+    res.status(500).json({ error: "Error al crear el medicamento" });
   }
 };
 
