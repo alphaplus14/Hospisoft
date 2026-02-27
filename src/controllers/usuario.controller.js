@@ -11,7 +11,7 @@ export const getUsuarios = async (req, res) => {
 
 export const getUsuarioById = async (req, res) => {
   try {
-    const results = await usuarioModel.findbyid();
+    const results = await usuarioModel.findbyid(req.params.id);
     res.json({ results });
   } catch (error) {
     res.status(500).json({ error: "Error al obtener el usuario" });

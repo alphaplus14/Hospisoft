@@ -9,9 +9,9 @@ export const usuarioModel = {
 
     return rows;
   },
-  findbyid: async () => {
+  findbyid: async (id) => {
     const sql = "select * from usuario where idUsuario=?";
-    const [rows] = await db.query(sql);
+    const [rows] = await db.query(sql, [id]);
     return rows;
   },
 

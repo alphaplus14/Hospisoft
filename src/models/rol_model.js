@@ -9,9 +9,9 @@ export const rolModel = {
 
     return rows;
   },
-  findbyid: async () => {
+  findbyid: async (id) => {
     const sql = "select * from rol where idRol=?";
-    const [rows] = await db.query(sql);
+    const [rows] = await db.query(sql,[id]);
     return rows;
   },
 
