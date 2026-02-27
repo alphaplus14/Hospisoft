@@ -1,6 +1,6 @@
 import { db } from "./bdatos.js";
 
-const db = cnx.promise();
+
 
 export const usuarioModel = {
   findall: async () => {
