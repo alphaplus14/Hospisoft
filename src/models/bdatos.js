@@ -6,8 +6,8 @@ try {
   cnx = mysql.createPool({
     host: "localhost",
     user: "root",
-    password: "tu_contraseña_aqui", // ✅ Agregar tu contraseña real
-    database: "hospisoft",
+    password: "", // Agregar tu contraseña real
+    database: "hospisoft_db",
     port: "3306",
     waitForConnections: true,
     connectionLimit: 10,
